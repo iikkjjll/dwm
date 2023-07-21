@@ -98,6 +98,7 @@ static const char *volup[] = { "/home/luck/app/dwm/scripts/volup.sh", NULL };
 static const char *voldown[] = { "/home/luck/app/dwm/scripts/voldown.sh", NULL };
 static const char *lightdown[] = { "/home/luck/app/dwm/scripts/lightdown.sh", NULL };
 static const char *lightup[] = { "/home/luck/app/dwm/scripts/lightup.sh", NULL };
+static const char *bgswitch[] = { "/home/luck/app/dwm/scripts/bg-switch.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -115,6 +116,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_F3,     spawn,          {.v = volup } },
 	{ MODKEY,                       XK_F11,    spawn,          {.v = lightdown } },
 	{ MODKEY,                       XK_F12,    spawn,          {.v = lightup } },
+	{ MODKEY,                       XK_F10,    spawn,          {.v = bgswitch } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = pcmanfmcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
