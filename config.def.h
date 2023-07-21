@@ -93,6 +93,9 @@ static const char *pcmanfmcmd[] = { "pcmanfm", NULL };
 // all of my scriptes.
 static const char *trayertoggle[] = { "/home/luck/app/dwm/scripts/trayer-toggle.sh", NULL };
 static const char *picomtoggle[] = { "/home/luck/app/dwm/scripts/picom-toggle.sh", NULL };
+static const char *voltoggle[] = { "/home/luck/app/dwm/scripts/voltoggle.sh", NULL };
+static const char *volup[] = { "/home/luck/app/dwm/scripts/volup.sh", NULL };
+static const char *voldown[] = { "/home/luck/app/dwm/scripts/voldown.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -105,6 +108,9 @@ static const Key keys[] = {
 	{ MODKEY|ControlMask,           XK_p,      spawn,          {.v = picomtoggle} },
 	{ 0,                            XK_F1,     spawn,          {.v = flameshotcmd} },
 	{ MODKEY,                       XK_c,      spawn,          {.v = broswercmd } },
+	{ MODKEY,                       XK_F1,     spawn,          {.v = voltoggle } },
+	{ MODKEY,                       XK_F2,     spawn,          {.v = voldown } },
+	{ MODKEY,                       XK_F3,     spawn,          {.v = volup } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = pcmanfmcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
