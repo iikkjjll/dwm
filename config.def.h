@@ -101,6 +101,7 @@ static const char *lightdown[] = { "/home/luck/app/dwm/scripts/lightdown.sh", NU
 static const char *lightup[] = { "/home/luck/app/dwm/scripts/lightup.sh", NULL };
 static const char *bgswitch[] = { "/home/luck/app/dwm/scripts/bg-switch.sh", NULL };
 static const char *screenkeytoggle[] = { "/home/luck/app/dwm/scripts/screenkey-toggle.sh", NULL };
+static const char *xinputtoggle[] = { "/home/luck/app/dwm/scripts/xinput-toggle.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -112,6 +113,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_t,      spawn,          {.v = trayertoggle} },
 	{ MODKEY,                       XK_p,      spawn,          {.v = picomtoggle} },
 	{ MODKEY,                       XK_s,      spawn,          {.v = screenkeytoggle} },
+	{ MODKEY,                       XK_x,      spawn,          {.v = xinputtoggle} },
 	{ 0,                            XK_F1,     spawn,          {.v = flameshotcmd} },
 	{ MODKEY,                       XK_e,      spawn,          {.v = edgecmd } },
 	{ MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },
