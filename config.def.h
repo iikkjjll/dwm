@@ -94,7 +94,8 @@ static const char *picomtoggle[] = { "/home/luck/app/dwm/scripts/picom-toggle.sh
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	// { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
+	// { MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
+	{ MODKEY,                       XK_r,      spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_space,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY|ControlMask,           XK_t,      spawn,          {.v = trayertoggle} },
