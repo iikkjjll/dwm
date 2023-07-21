@@ -83,6 +83,7 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "70x20"
 static const char *roficmd[] = { "rofi", "-show", "run", NULL };
 static const char *flameshotcmd[] = { "flameshot", "gui", NULL };
 static const char *broswercmd[] = { "microsoft-edge-stable", NULL };
+static const char *pcmanfmcmd[] = { "pcmanfm", NULL };
 
 
 
@@ -100,6 +101,7 @@ static const Key keys[] = {
 	{ MODKEY|ControlMask,           XK_p,      spawn,          {.v = picomtoggle} },
 	{ 0,                            XK_F1,     spawn,          {.v = flameshotcmd} },
 	{ MODKEY,                       XK_c,      spawn,          {.v = broswercmd } },
+	{ MODKEY,                       XK_e,      spawn,          {.v = pcmanfmcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
