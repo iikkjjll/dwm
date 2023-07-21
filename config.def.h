@@ -85,7 +85,8 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "70x20"
 // all of my commands by myself.
 static const char *roficmd[] = { "rofi", "-show", "run", NULL };
 static const char *flameshotcmd[] = { "flameshot", "gui", NULL };
-static const char *broswercmd[] = { "microsoft-edge-stable", NULL };
+static const char *edgecmd[] = { "microsoft-edge-stable", NULL };
+static const char *firefoxcmd[] = { "firefox", NULL };
 static const char *pcmanfmcmd[] = { "pcmanfm", NULL };
 
 
@@ -107,17 +108,18 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_r,      spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_space,  togglescratch,  {.v = scratchpadcmd } },
-	{ MODKEY|ControlMask,           XK_t,      spawn,          {.v = trayertoggle} },
-	{ MODKEY|ControlMask,           XK_p,      spawn,          {.v = picomtoggle} },
+	{ MODKEY,                       XK_t,      spawn,          {.v = trayertoggle} },
+	{ MODKEY,                       XK_p,      spawn,          {.v = picomtoggle} },
 	{ 0,                            XK_F1,     spawn,          {.v = flameshotcmd} },
-	{ MODKEY,                       XK_c,      spawn,          {.v = broswercmd } },
+	{ MODKEY,                       XK_e,      spawn,          {.v = edgecmd } },
+	{ MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },
 	{ MODKEY,                       XK_F1,     spawn,          {.v = voltoggle } },
 	{ MODKEY,                       XK_F2,     spawn,          {.v = voldown } },
 	{ MODKEY,                       XK_F3,     spawn,          {.v = volup } },
 	{ MODKEY,                       XK_F11,    spawn,          {.v = lightdown } },
 	{ MODKEY,                       XK_F12,    spawn,          {.v = lightup } },
 	{ MODKEY,                       XK_F10,    spawn,          {.v = bgswitch } },
-	{ MODKEY,                       XK_e,      spawn,          {.v = pcmanfmcmd } },
+	{ MODKEY,                       XK_m,      spawn,          {.v = pcmanfmcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
@@ -131,10 +133,10 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ Mod1Mask,                     XK_Tab,    focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[3] } },
+	{ MODKEY|ControlMask,           XK_t,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY|ControlMask,           XK_f,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY|ControlMask,           XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY|ControlMask,           XK_g,      setlayout,      {.v = &layouts[3] } },
 /*	{ MODKEY,                       XK_space,  setlayout,      {0} }, */
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
