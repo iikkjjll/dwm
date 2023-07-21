@@ -73,13 +73,20 @@ static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "70x20", NULL };
 
-// all of my scriptes
+
+// all of my commands by myself.
+static const char *roficmd[] = { "rofi", "-show", "run", NULL };
+
+
+
+// all of my scriptes.
 static const char *trayertoggle[] = { "/home/luck/app/dwm/scripts/trayer-toggle.sh", NULL };
 static const char *picomtoggle[] = { "/home/luck/app/dwm/scripts/picom-toggle.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	// { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_space,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY|ControlMask,           XK_t,      spawn,          {.v = trayertoggle} },
