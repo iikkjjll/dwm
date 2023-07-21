@@ -75,6 +75,7 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "70x20"
 
 // all of my scriptes
 static const char *trayertoggle[] = { "/home/luck/app/dwm/scripts/trayer-toggle.sh", NULL };
+static const char *picomtoggle[] = { "/home/luck/app/dwm/scripts/picom-toggle.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -82,6 +83,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_space,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY|ControlMask,           XK_t,      spawn,          {.v = trayertoggle} },
+	{ MODKEY|ControlMask,           XK_p,      spawn,          {.v = picomtoggle} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
