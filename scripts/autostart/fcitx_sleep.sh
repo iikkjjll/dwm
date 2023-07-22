@@ -1,8 +1,8 @@
 #!/bin/bash
 
 sleep 10
-fcitx &
+# fcitx &
 numlockx on
 clipit &
-nm-applet &
+# nm-applet &
 
