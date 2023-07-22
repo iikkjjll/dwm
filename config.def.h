@@ -107,6 +107,7 @@ static const char *xinputtoggle[] = { "/home/luck/app/dwm/scripts/xinput-toggle.
 static const char *altq[] = { "/home/luck/app/dwm/scripts/altq.sh", NULL };
 static const char *nmtoggle[] = { "/home/luck/app/dwm/scripts/nm-applet-toggle.sh", NULL };
 static const char *fixxmodmap[] = { "/home/luck/app/dwm/scripts/fix_xmodmap_xset.sh", NULL };
+static const char *zhtoggle[] = { "/home/luck/app/dwm/scripts/zh-toggle.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -131,6 +132,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_F12,    spawn,          {.v = lightup } },
 	{ MODKEY,                       XK_F10,    spawn,          {.v = bgswitch } },
 	{ MODKEY,                       XK_F8,     spawn,          {.v = fixxmodmap } },
+	{ MODKEY,                       XK_F9,     spawn,          {.v = zhtoggle } },
 	{ MODKEY,                       XK_m,      spawn,          {.v = pcmanfmcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
