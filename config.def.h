@@ -42,9 +42,11 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class         instance    title       tags mask     isfloating   monitor */
+	{ "Gimp",        NULL,       NULL,       0,            1,           -1 },
+	// { "altq",        NULL,       NULL,       0,            1,           -1 },
+	{ "wudao-dict",  NULL,       NULL,       0,            1,           -1 },
+	{ "Firefox",     NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
@@ -102,6 +104,7 @@ static const char *lightup[] = { "/home/luck/app/dwm/scripts/lightup.sh", NULL }
 static const char *bgswitch[] = { "/home/luck/app/dwm/scripts/bg-switch.sh", NULL };
 static const char *screenkeytoggle[] = { "/home/luck/app/dwm/scripts/screenkey-toggle.sh", NULL };
 static const char *xinputtoggle[] = { "/home/luck/app/dwm/scripts/xinput-toggle.sh", NULL };
+static const char *altq[] = { "/home/luck/app/dwm/scripts/altq.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -114,6 +117,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = picomtoggle} },
 	{ MODKEY,                       XK_s,      spawn,          {.v = screenkeytoggle} },
 	{ MODKEY,                       XK_x,      spawn,          {.v = xinputtoggle} },
+	{ Mod1Mask,                     XK_q,      spawn,          {.v = altq} },
 	{ 0,                            XK_F1,     spawn,          {.v = flameshotcmd} },
 	{ MODKEY,                       XK_e,      spawn,          {.v = edgecmd } },
 	{ MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },
