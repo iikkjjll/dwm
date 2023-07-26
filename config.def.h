@@ -92,6 +92,7 @@ static const char *flameshotcmd[] = { "flameshot", "gui", NULL };
 static const char *edgecmd[] = { "microsoft-edge-stable", NULL };
 static const char *firefoxcmd[] = { "firefox", NULL };
 static const char *pcmanfmcmd[] = { "pcmanfm", NULL };
+static const char *slockcmd[] = { "slock", NULL };
 
 
 
@@ -117,6 +118,7 @@ static const Key keys[] = {
 	// { MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_KP_Enter,  spawn,          {.v = slockcmd } },
 	{ MODKEY,                       XK_space,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_t,      spawn,          {.v = trayertoggle} },
 	{ MODKEY,                       XK_p,      spawn,          {.v = picomtoggle} },
